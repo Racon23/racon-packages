@@ -1,3 +1,1 @@
-
-config settings 'cpufreq'
-
+config cpufreq 'settings'
