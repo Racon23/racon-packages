@@ -5,13 +5,13 @@ function index()
 		return
 	end
 
-	entry({"admin", "nlbw", "usage"}, alias("admin", "nlbw", "usage", "details"), _("Usage"), 60).dependent = true
-	entry({"admin", "nlbw", "usage", "details"}, template("wrtbwmon/wrtbwmon"), _("Details"), 10).leaf = true
-	entry({"admin", "nlbw", "usage", "config"}, cbi("wrtbwmon/config"), _("Configuration"), 20).leaf = true
-	entry({"admin", "nlbw", "usage", "custom"}, form("wrtbwmon/custom"), _("User file"), 30).leaf = true
-	entry({"admin", "nlbw", "usage", "check_dependency"}, call("check_dependency")).dependent = true
-	entry({"admin", "nlbw", "usage", "usage_data"}, call("usage_data")).dependent = true
-	entry({"admin", "nlbw", "usage", "usage_reset"}, call("usage_reset")).dependent = true
+	entry({"admin", "services", "nlbw", "usage"}, alias("admin", "services", "nlbw", "usage", "details"), _("Usage"), 60).dependent = true
+	entry({"admin", "services", "nlbw", "usage", "details"}, template("wrtbwmon/wrtbwmon"), _("Details"), 10).leaf = true
+	entry({"admin", "services", "nlbw", "usage", "config"}, cbi("wrtbwmon/config"), _("Configuration"), 20).leaf = true
+	entry({"admin", "services", "nlbw", "usage", "custom"}, form("wrtbwmon/custom"), _("User file"), 30).leaf = true
+	entry({"admin", "services", "nlbw", "usage", "check_dependency"}, call("check_dependency")).dependent = true
+	entry({"admin", "services", "nlbw", "usage", "usage_data"}, call("usage_data")).dependent = true
+	entry({"admin", "services", "nlbw", "usage", "usage_reset"}, call("usage_reset")).dependent = true
 end
 
 function usage_database_path()
